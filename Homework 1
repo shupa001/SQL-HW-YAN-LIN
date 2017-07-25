@@ -40,7 +40,7 @@ group by carrier, distance
 order by flight_count desc
 limit 5;
 
-/* Question 8 - Get the top 10 airlines based on the sum of air time, ordered by year in descending order */
+/* Question 8 - Get the top 10 airlines based on the sum of air time, ordered by air time in descending order */
 select carrier, sum(air_time) as air_time
 from flights.flights
 group by carrier
