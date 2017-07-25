@@ -1,2 +1,48 @@
-# Auto detect text files and perform LF normalization
-* text=auto
+/* Question 1 - Get the longest distance */
+select flight, origin, dest, distance 
+from flights.flights 
+where distance in 
+(select max(distance) from flights.flights)
+group by flight, origin, dest;
+
+/* Question 2 - Get the different numbers of engines and get the aircraft which has the most number of seats in each number of engines */
+select engine,engines, max(seats)
+from flights.planes
+group by engines, engines;
+
+/* Question 3 - Get the total numbers of flights */
+select count(*)
+from flights.flights;
+
+/* Question 4 - Get the total numbers of flights by carriers */
+select carrier, count(*)
+from flights.flights
+group by carrier;
+
+/* Question 5 - Get the total nubmers of flights by airline in descending order */
+select carrier, count(*) as flight_count
+from flights.flights
+group by carrier
+order by flight_count desc;
+
+/* Question 6 - Get the top 5 airlines based on the numbers of flight_count */
+select carrier, count(*) as flight_count
+from flights.flights
+group by carrier
+order by flight_count desc
+limit 5;
+
+/* Question 7 - Get the top 5 airlines based on the numbers of flight count and the distance is greater or equal to 1000 miles */
+select carrier, distance,count(*) as flight_count
+from flights.flights
+where distance >= 1000
+group by carrier, distance
+order by flight_count desc
+limit 5;
+
+/* Question 8 - Get the top 10 airlines based on the sum of air time, ordered by year in descending order */
+select carrier, sum(air_time) as air_time
+from flights.flights
+group by carrier
+order by air_time desc
+limit 10;
