@@ -6,9 +6,9 @@ where distance in
 group by flight, origin, dest;
 
 /* Question 2 - Get the different numbers of engines and get the aircraft which has the most number of seats in each number of engines */
-select engine,engines, max(seats)
+select engines, max(seats)
 from flights.planes
-group by engines, engines;
+group by engines;
 
 /* Question 3 - Get the total numbers of flights */
 select count(*)
