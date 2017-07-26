@@ -17,8 +17,8 @@ from flights.planes
 where 
 	(engines = 1 and seats = 16) or
 	(engines = 2 and seats = 400) or
-  (engines = 3 and seats = 379) or
-  (engines = 4 and seats = 450)
+  	(engines = 3 and seats = 379) or
+  	(engines = 4 and seats = 450)
 group by engines, model,seats;
 
 /* Question 3 - Get the total numbers of flights */
