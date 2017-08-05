@@ -28,7 +28,7 @@ INSERT INTO users VALUES (20, 'Modesto', 10, TRUE);
 INSERT INTO users VALUES (21, 'Ayine', 10, TRUE);
 INSERT INTO users VALUES (22, 'Christopher', 11, TRUE);
 INSERT INTO users VALUES (23, 'Cheong Woo', 11, TRUE);
-INSERT INTO users VALUES (24, 'Saulat', 12, TRUE);
+INSERT INTO users VALUES (24, 'Saulat', 12, FALSE);
 INSERT INTO users VALUES (25, 'Heidy', NULL, FALSE);
 
 
